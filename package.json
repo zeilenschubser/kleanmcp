@@ -1,0 +1,39 @@
+{
+  "name": "kleanmcp",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeilenschubser/kleanmcp.git"
+  },
+  "version": "1.0.0",
+  "license": "SEE LICENSE IN ./LICENSE",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.mjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.mjs",
+      "require": "./dist/types.mjs"
+    }
+  },
+  "scripts": {
+    "build": "bun build.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "dependencies": {
+    "elysia-jsonrpc": "1.0.50",
+    "elysia": "^1.4.25",
+    "zod": "^4.3.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

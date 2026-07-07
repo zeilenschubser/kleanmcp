@@ -5,7 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/zeilenschubser/kleanmcp.git"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "SEE LICENSE IN ./LICENSE",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

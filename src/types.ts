@@ -73,19 +73,23 @@ export type ToolParameterDefinition = {
   default?: object;
 };
 
+export type NamedToolParameterDefinition = ToolParameterDefinition & {
+  name: string;
+};
+
 export interface CallToolResult {
   content: any[];
   isError?: boolean;
 }
 
 export function InputSchemaFromParameters(
-  params: ToolParameterDefinition[],
+  params: NamedToolParameterDefinition[],
 ): InputSchemaType {
   return {
     type: "object",
     properties: Object.fromEntries(
-      Object.entries(params).map(([k, v]) => [
-        k,
+      Object.entries(params).map(([k,v]) => [
+        v.name,
         {
           description: v.description,
           type: v.type,

@@ -1,4 +1,4 @@
-# test_leanmcp
+# test for kleanmcp
 
 ## Example
 

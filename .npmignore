@@ -4,3 +4,4 @@ node_modules
 *.lock
 *.ts
 test
+!dist/*.d.ts
